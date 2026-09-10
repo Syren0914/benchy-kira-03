@@ -1,0 +1,5 @@
+# Local delivery archives are regenerated from the source files.
+KIRA-documentation-draft.zip
+__pycache__/
+.DS_Store
+Thumbs.db
