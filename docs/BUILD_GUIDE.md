@@ -22,7 +22,7 @@ The source set is 40 HEIC photographs, IMG_1245 through IMG_1284, in the creator
 | Other connectors | Yellow upper connector; lower +/− pair | Part numbers, polarity, circuit function, permissible loads |
 | Grounding | Exterior cannot establish it | Verified schematic for PE, chassis, DC returns, and output isolation |
 | Enclosure | PLA confirmed; 3MF included | Parametric source if available, validated slicer settings, screw details |
-| Firmware | Arduino Nano confirmed; sketch not supplied | Exact board, code, pin map, relay behavior and build instructions |
+| Firmware | Reference Nano relay-module test sketch supplied | Exact board and relay module, hardware bias, final switched circuit, and as-built behavior |
 | Performance | No test record | Regulation, ripple, thermal, protection, and combined-load results |
 
 Do not identify a commercial module from its faceplate alone. Visually similar modules can have different pinouts and specifications.

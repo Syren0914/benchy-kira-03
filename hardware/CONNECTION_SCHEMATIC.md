@@ -7,6 +7,8 @@
 
 [Open the scalable SVG version](connection-schematic.svg)
 
+The separate [Nano and relay bench-test diagram](nano-relay-test.svg) defines a USB-powered, low-energy reference circuit using a pushbutton on `D2` and a relay-module input on `D7`. Its relay contacts remain disconnected, so it does not resolve the TBC final integration paths shown here.
+
 ## Electrical connections
 
 | Net | From | To | Status and verification |
@@ -19,7 +21,7 @@
 | Adjustable + | SK120 `OUT+` | Adjustable-output positive terminal | Intended; confirm the exact terminal pair and polarity. |
 | Adjustable − | SK120 `OUT-` | Adjustable-output negative terminal | Intended; confirm the exact terminal pair and polarity. |
 | Nano supply | Regulated +5 V and DC common | Nano `5V` and `GND` | **TBC:** confirm whether the Nano is powered from the PSU's 5 V rail, USB, or another regulator. Never apply PSU power to `VIN` unless the chosen board's requirements are met. |
-| Relay input | Nano GPIO, +5 V, and GND | Relay module `IN`, `VCC`, and `GND` | **TBC:** record the exact GPIO, active level, and relay-module type. A bare relay requires a driver and flyback suppression. |
+| Relay input | Nano `D7`, +5 V, and GND | Relay module `IN`, `VCC`, and `GND` | **Reference test only:** the included sketch defaults to active-low control. Confirm the exact 5 V logic-compatible module and active level before testing. A bare relay requires a driver and flyback suppression. |
 | Relay contacts | Relay `COM` and `NO`/`NC` | Switched circuit | **TBC:** the relay's purpose has not been confirmed. Do not connect its contacts until the switched circuit and ratings are documented. |
 | PSU enable | PSU `PS_ON#` and DC common | Switch or reviewed control circuit | **TBC:** verify the donor PSU documentation. Do not identify this conductor by color alone, especially on modular PSU sockets. |
 
