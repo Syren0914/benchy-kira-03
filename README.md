@@ -2,6 +2,8 @@
 
 A compact desktop power-supply project with a distinctive white enclosure, black panels, and a front-mounted display and controls. The goal of this project is to make the design understandable, reproducible, and easy for other makers to improve.
 
+I added pixel-art details to give the enclosure a distinctive, friendly identity. I wanted Benchy to be visually engaging as well as useful, rather than another plain workshop instrument.
+
 **Documentation status: pre-release draft, 10 September 2026.** This package includes the creator-supplied enclosure 3MF, a creator-confirmed preliminary parts list, a preliminary connection schematic, and a review of 40 exterior photos. Exact as-built connections, complete procurement details, internal wiring photos, Nano firmware, and test results are still needed. It is not yet a complete or validated construction release. Do not infer electrical connections or operating limits from the photographs.
 
 **Project name:** Benchy. **Project identifier:** Kira 03. The original Drive folder retains its earlier Kira 04 label; the public name is confirmed as Benchy — Kira 03.
@@ -29,7 +31,7 @@ Desktop computers have become more power-hungry, so a power supply that was adeq
 | [Release checklist](docs/RELEASE_CHECKLIST.md) | Concrete requirements for a reproducible public release |
 | [Open-source licensing](docs/LICENSING.md) | Adopted CERN-OHL-S-2.0 terms and third-party attribution scope |
 | [Contributing](CONTRIBUTING.md) | How to report problems and contribute improvements |
-| Professor review brief: [Word](docs/Benchy_Kira_03_Professor_Review_Brief.docx) · [PDF](docs/Benchy_Kira_03_Professor_Review_Brief.pdf) | Project rationale, current engineering status, and focused questions for faculty feedback |
+| Project review brief: [Word](docs/Benchy_Kira_03_Project_Review_Brief.docx) · [fillable PDF](docs/Benchy_Kira_03_Project_Review_Brief.pdf) | Project rationale, current engineering status, and feedback form for a professor or publication reviewer |
 
 ## What the photos establish
 

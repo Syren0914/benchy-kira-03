@@ -39,7 +39,7 @@ These priorities are editorial recommendations for this project, not predictions
 
 **Title:** Benchy — Kira 03 Bench Power Supply
 
-“KIRA is my compact bench power-supply project, built around a distinctive white enclosure and a front panel with a display, rotary control, and labeled connections. I’m documenting the design so other makers can understand it, reproduce it, and improve it. The project is currently being prepared for public release; the build page will identify which files and tests are complete.”
+“KIRA is my compact bench power-supply project, built around a distinctive white enclosure and a front panel with a display, rotary control, and labeled connections. I added pixel-art details to give it a friendly identity and make a practical workshop tool visually engaging. I’m documenting the design so other makers can understand it, reproduce it, and improve it. The project is currently being prepared for public release; the build page will identify which files and tests are complete.”
 
 ## Launch copy — use after the release is complete
 

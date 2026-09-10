@@ -8,7 +8,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "docs" / "Benchy_Kira_03_Professor_Review_Brief.docx"
+OUT = ROOT / "docs" / "Benchy_Kira_03_Project_Review_Brief.docx"
 IMAGE = ROOT / "docs" / "images" / "model-preview.png"
 
 NAVY = "17365D"
@@ -164,7 +164,7 @@ p.add_run("Benchy Kira 03 Engineering Project Review Brief")
 p = doc.add_paragraph()
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p.paragraph_format.space_after = Pt(13)
-r = p.add_run("Prepared for Faculty Review")
+r = p.add_run("Prepared for Project Review")
 r.bold = True
 r.font.size = Pt(13)
 
@@ -211,6 +211,9 @@ doc.add_paragraph(
 )
 doc.add_paragraph(
     "This project lets me explore engineering reuse as a design problem. A successful conversion requires more than placing an old power supply in a new case. I need to document the available rails, safe operating limits, control behavior, output connections, cooling, mechanical fit, and test results so that the finished tool is useful and understandable."
+)
+doc.add_paragraph(
+    "I also added pixel-art details to give the enclosure a distinctive, friendly identity. I wanted Benchy to be visually engaging as well as useful, rather than another plain workshop instrument."
 )
 
 doc.add_heading("Project overview", level=1)
@@ -302,7 +305,7 @@ questions = [
 for q in questions:
     add_bullet(doc, q)
 
-p = doc.add_heading("Faculty feedback", level=1)
+p = doc.add_heading("Reviewer feedback", level=1)
 p.paragraph_format.page_break_before = True
 doc.add_paragraph("Reviewer name ____________________________________    Date ____________________")
 
@@ -333,7 +336,7 @@ for row_index, area in enumerate((
 ), start=1):
     cells = feedback.add_row().cells
     cells[0].text = area
-    cells[1].text = "Strong / Adequate / Revise"
+    cells[1].text = ""
     cells[2].text = "\n\n"
     for idx, cell in enumerate(cells):
         cell.width = feedback_widths[idx]
@@ -361,7 +364,7 @@ for _ in range(5):
     p.paragraph_format.space_after = Pt(7)
 
 doc.core_properties.title = "Benchy Kira 03 Engineering Project Review Brief"
-doc.core_properties.subject = "Faculty review of an open source bench power supply project"
+doc.core_properties.subject = "Review of an open source bench power supply project"
 doc.core_properties.author = "Erdene Batbayar"
 doc.core_properties.keywords = "Benchy, Kira 03, bench power supply, reuse, engineering project"
 
