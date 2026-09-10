@@ -4,7 +4,7 @@ A compact desktop power-supply project with a distinctive white enclosure, black
 
 I added pixel-art details to give the enclosure a distinctive, friendly identity. I wanted Benchy to be visually engaging as well as useful, rather than another plain workshop instrument.
 
-**Documentation status: pre-release draft, 10 September 2026.** This package includes the creator-supplied enclosure 3MF, a creator-confirmed preliminary parts list, a preliminary connection schematic, and a review of 40 exterior photos. Exact as-built connections, complete procurement details, internal wiring photos, Nano firmware, and test results are still needed. It is not yet a complete or validated construction release. Do not infer electrical connections or operating limits from the photographs.
+**Documentation status: pre-release draft, 10 September 2026.** This package includes the creator-supplied enclosure 3MF, a creator-confirmed preliminary parts list, a preliminary connection schematic, a Nano-to-relay bench-test sketch and diagram, and a review of 40 exterior photos. Exact as-built control integration, complete procurement details, internal wiring photos, and test results are still needed. It is not yet a complete or validated construction release. Do not infer electrical connections or operating limits from the photographs.
 
 **Project name:** Benchy. **Project identifier:** Kira 03. The original Drive folder retains its earlier Kira 04 label; the public name is confirmed as Benchy — Kira 03.
 
@@ -25,7 +25,8 @@ Desktop computers have become more power-hungry, so a power supply that was adeq
 | [Parts list](docs/PARTS_LIST.md) | Creator-confirmed components and remaining sourcing details |
 | [Enclosure model](mechanical/README.md) | Included 3MF, embedded preview, inspection and printing notes |
 | [Connection schematic](hardware/CONNECTION_SCHEMATIC.md) | Preliminary module-level wiring map, connection table, and confirmation checklist |
-| [Nano and relay](docs/NANO_AND_RELAY.md) | Required control-system source, pin map, and behavior |
+| [Nano and relay](docs/NANO_AND_RELAY.md) | Compilable relay-module bench test, reference pin map, upload steps, and final integration requirements |
+| [Arduino firmware](firmware/README.md) | Nano sketch, low-energy test connections, configuration, and validation procedure |
 | [Photo selection](docs/PHOTO_SELECTION.md) | Selected images, captions, alt text, and missing instructional shots |
 | [YouTube production kit](docs/YOUTUBE.md) | Story, narration draft, shot list, chapters, and description |
 | [Public launch plan](docs/PUBLISHING.md) | Recommended platforms and a practical launch sequence |
