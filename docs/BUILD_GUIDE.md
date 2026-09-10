@@ -5,7 +5,7 @@
 
 ## 1. Project purpose
 
-KIRA is a compact bench power-supply project intended to be shared so that other makers can understand, reproduce, repair, and modify it. The photographed prototype combines a vertically arranged front panel with a display, knob, labeled terminals, and a framed enclosure.
+Benchy is a compact bench power-supply project intended to be shared so that other makers can understand, reproduce, repair, and modify it. Desktop computers have become more power-hungry, so a power supply that was adequate ten years ago may no longer meet the demands of a modern computer. That does not mean the older supply has stopped working. Rather than discard functional hardware, the project repurposes it as the basis of a bench supply for electronics work, prototyping, and testing. The photographed prototype combines a vertically arranged front panel with a display, knob, labeled terminals, and a framed enclosure.
 
 The documentation must explain both what to do and how to verify that each stage is correct. Appearance alone does not establish safe construction, electrical capability, or compliance.
 
@@ -91,7 +91,7 @@ Do not substitute merely because a product looks similar. Evaluate electrical ra
 
 ## 7. Circuit and wiring documentation
 
-No circuit is inferred in this draft. The definitive schematic must show the complete input path, protective measures, each conversion stage, control connections, and every output return. If an intact commercial power module is used, distinguish its internal proprietary design from KIRA's original interconnection and mechanical work.
+A [preliminary connection schematic](../hardware/CONNECTION_SCHEMATIC.md) now records the intended low-voltage module architecture and flags every unconfirmed Nano, relay, and PSU-enable connection as TBC. It is not a build-ready schematic. The definitive revision must show the complete input path, protective measures, each conversion stage, control connections, and every output return. If an intact commercial power module is used, distinguish its internal proprietary design from KIRA's original interconnection and mechanical work.
 
 Create one wiring-schedule row per conductor:
 

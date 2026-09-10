@@ -2,9 +2,13 @@
 
 A compact desktop power-supply project with a distinctive white enclosure, black panels, and a front-mounted display and controls. The goal of this project is to make the design understandable, reproducible, and easy for other makers to improve.
 
-**Documentation status: pre-release draft, 9 September 2026.** This package includes the creator-supplied enclosure 3MF, a creator-confirmed preliminary parts list, and a review of 40 exterior photos. The exact schematic, complete procurement details, internal wiring photos, Nano firmware, and test results are still needed. It is not yet a complete or validated construction release. Do not infer electrical connections or operating limits from the photographs.
+**Documentation status: pre-release draft, 10 September 2026.** This package includes the creator-supplied enclosure 3MF, a creator-confirmed preliminary parts list, a preliminary connection schematic, and a review of 40 exterior photos. Exact as-built connections, complete procurement details, internal wiring photos, Nano firmware, and test results are still needed. It is not yet a complete or validated construction release. Do not infer electrical connections or operating limits from the photographs.
 
 **Project name:** Benchy. **Project identifier:** Kira 03. The original Drive folder retains its earlier Kira 04 label; the public name is confirmed as Benchy — Kira 03.
+
+## Motivation
+
+Desktop computers have become more power-hungry, so a power supply that was adequate ten years ago may no longer meet the demands of a modern computer. That does not mean the old unit has stopped working or has become useless. Rather than discard functional hardware, I repurposed it as the basis of a bench power supply. Benchy extends the useful life of the original supply and turns it into a practical source of power for electronics work, prototyping, and testing.
 
 ![Enclosure model preview](docs/images/model-preview.png)
 
@@ -17,13 +21,15 @@ A compact desktop power-supply project with a distinctive white enclosure, black
 | [Project and build guide](docs/BUILD_GUIDE.md) | Design overview, information required to build, assembly stages, commissioning, operation, and troubleshooting |
 | [Parts list](docs/PARTS_LIST.md) | Creator-confirmed components and remaining sourcing details |
 | [Enclosure model](mechanical/README.md) | Included 3MF, embedded preview, inspection and printing notes |
+| [Connection schematic](hardware/CONNECTION_SCHEMATIC.md) | Preliminary module-level wiring map, connection table, and confirmation checklist |
 | [Nano and relay](docs/NANO_AND_RELAY.md) | Required control-system source, pin map, and behavior |
 | [Photo selection](docs/PHOTO_SELECTION.md) | Selected images, captions, alt text, and missing instructional shots |
 | [YouTube production kit](docs/YOUTUBE.md) | Story, narration draft, shot list, chapters, and description |
 | [Public launch plan](docs/PUBLISHING.md) | Recommended platforms and a practical launch sequence |
 | [Release checklist](docs/RELEASE_CHECKLIST.md) | Concrete requirements for a reproducible public release |
-| [License proposal](docs/LICENSING.md) | Suggested licenses and third-party attribution scope |
+| [Open-source licensing](docs/LICENSING.md) | Adopted CERN-OHL-S-2.0 terms and third-party attribution scope |
 | [Contributing](CONTRIBUTING.md) | How to report problems and contribute improvements |
+| Professor review brief: [Word](docs/Benchy_Kira_03_Professor_Review_Brief.docx) · [PDF](docs/Benchy_Kira_03_Professor_Review_Brief.pdf) | Project rationale, current engineering status, and focused questions for faculty feedback |
 
 ## What the photos establish
 
@@ -45,6 +51,8 @@ The rear photo shows a mains-style inlet. Treat the design as mains-powered unle
 
 ## License and availability
 
-License choices are proposed in [LICENSING.md](docs/LICENSING.md); no license has been applied to missing hardware sources or third-party assets. The [photo gallery](https://drive.google.com/drive/folders/1a5vY3R4KkWWrwnvo-AKPjcpfRcpAucLN) is public: anyone with the link can view it. Selected originals are linked in the photo guide.
+Copyright © 2026 Erdene Batbayar. The original hardware design source, enclosure files, connection schematic, and repository documentation are licensed under the [CERN Open Hardware Licence Version 2 — Strongly Reciprocal](LICENSE). This permits community use and improvement under reciprocal open-source terms while the creator retains copyright. Third-party material retains its own terms. See [LICENSING.md](docs/LICENSING.md) for the scope.
 
-This public repository contains the documentation draft and enclosure model. A validated build release is still in preparation.
+The [photo gallery](https://drive.google.com/drive/folders/1a5vY3R4KkWWrwnvo-AKPjcpfRcpAucLN) is public: anyone with the link can view it. Selected originals are linked in the photo guide; public viewing does not by itself grant reuse rights.
+
+This public repository contains the documentation draft, enclosure model, and a preliminary connection schematic. A validated build release is still in preparation.

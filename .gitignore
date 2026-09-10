@@ -3,3 +3,8 @@ KIRA-documentation-draft.zip
 __pycache__/
 .DS_Store
 Thumbs.db
+
+# Temporary local document-rendering dependencies and QA output
+.lo-*/
+.docx-qa*/
+LibreOffice_*/

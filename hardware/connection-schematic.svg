@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Benchy Kira 03 preliminary connection schematic</title>
+  <desc id="desc">A preliminary block schematic showing an intact ATX computer power supply feeding fixed 12 volt, 5 volt and 3.3 volt outputs and an SK120 adjustable converter. Arduino Nano and relay wiring is marked to be confirmed.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f9fc}.panel{fill:#fff;stroke:#17233b;stroke-width:3}.title{font:700 34px Arial,sans-serif;fill:#17233b}.sub{font:18px Arial,sans-serif;fill:#4a5872}.head{font:700 24px Arial,sans-serif;fill:#17233b}.txt{font:18px Arial,sans-serif;fill:#17233b}.small{font:15px Arial,sans-serif;fill:#4a5872}.warn{fill:#fff4d6;stroke:#c68100;stroke-width:3}.tbc{fill:#fff0f0;stroke:#b3261e;stroke-width:3;stroke-dasharray:10 8}.wire{fill:none;stroke-width:7}.dash{fill:none;stroke:#b3261e;stroke-width:5;stroke-dasharray:12 10}.label{font:700 16px Arial,sans-serif;paint-order:stroke;stroke:#f7f9fc;stroke-width:7px;stroke-linejoin:round}.node{fill:#fff;stroke-width:3}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker>
+  </defs>
+  <rect class="bg" width="1600" height="1000"/>
+  <text class="title" x="70" y="65">Benchy — Kira 03 • Preliminary Connection Schematic</text>
+  <text class="sub" x="70" y="100">Revision 0.1 • Confirm every connector, pin, polarity, protection device, and rating on the actual unit before wiring.</text>
+
+  <rect class="warn" x="70" y="130" width="1460" height="74" rx="12"/>
+  <text class="head" x="95" y="162">SAFETY:</text><text class="txt" x="210" y="162">The ATX PSU remains an intact mains-powered module. This drawing covers external low-voltage distribution only.</text>
+  <text class="txt" x="95" y="190">The Nano and relay function is still unknown; dashed red connections must not be built until confirmed.</text>
+
+  <rect class="panel" x="75" y="285" width="330" height="390" rx="18"/>
+  <text class="head" x="110" y="335">Intact ATX PC power supply</text>
+  <text class="txt" x="110" y="380">AC inlet, switch, internal</text><text class="txt" x="110" y="407">conversion and protection</text>
+  <line x1="110" y1="445" x2="370" y2="445" stroke="#cad1df" stroke-width="2"/>
+  <text class="txt" x="110" y="485">Low-voltage harness:</text>
+  <text class="txt" x="130" y="525" fill="#b58a00">+12 V</text>
+  <text class="txt" x="130" y="563" fill="#c62828">+5 V</text>
+  <text class="txt" x="130" y="601" fill="#d66a00">+3.3 V</text>
+  <text class="txt" x="130" y="639">DC common / return</text>
+
+  <rect class="panel" x="610" y="255" width="350" height="250" rx="18"/>
+  <text class="head" x="650" y="305">SK120 buck-boost module</text>
+  <text class="txt" x="650" y="355">IN+</text><text class="txt" x="820" y="355">OUT+</text>
+  <text class="txt" x="650" y="405">IN−</text><text class="txt" x="820" y="405">OUT−</text>
+  <text class="small" x="650" y="455">Confirm exact variant, cooling, limits,</text>
+  <text class="small" x="650" y="478">and terminal orientation.</text>
+
+  <rect class="panel" x="1190" y="240" width="335" height="115" rx="16"/><text class="head" x="1230" y="288">Adjustable output</text><text class="txt" x="1230" y="325">OUT+ / OUT− terminals</text>
+  <rect class="panel" x="1190" y="390" width="335" height="85" rx="16"/><text class="head" x="1230" y="442">Fixed +12 V output</text>
+  <rect class="panel" x="1190" y="510" width="335" height="85" rx="16"/><text class="head" x="1230" y="562">Fixed +5 V output</text>
+  <rect class="panel" x="1190" y="630" width="335" height="85" rx="16"/><text class="head" x="1230" y="682">Fixed +3.3 V output</text>
+  <rect class="panel" x="1190" y="750" width="335" height="85" rx="16"/><text class="head" x="1230" y="802">DC common terminals</text>
+
+  <path class="wire" d="M405 520H520V355H610" stroke="#d4aa00" marker-end="url(#arrow)"/><text class="label" x="470" y="505" fill="#8d7200">+12 V → IN+</text>
+  <path class="wire" d="M405 520H1100V432H1190" stroke="#d4aa00" marker-end="url(#arrow)"/><text class="label" x="980" y="505" fill="#8d7200">+12 V</text>
+  <path class="wire" d="M405 558H1085V552H1190" stroke="#d32f2f" marker-end="url(#arrow)"/><text class="label" x="1010" y="542" fill="#b3261e">+5 V</text>
+  <path class="wire" d="M405 596H1055V672H1190" stroke="#ef7d00" marker-end="url(#arrow)"/><text class="label" x="1010" y="650" fill="#b85f00">+3.3 V</text>
+  <path class="wire" d="M405 634H520V405H610" stroke="#20242c" marker-end="url(#arrow)"/><text class="label" x="450" y="660" fill="#20242c">DC common → IN−</text>
+  <path class="wire" d="M405 634H1020V792H1190" stroke="#20242c" marker-end="url(#arrow)"/>
+  <path class="wire" d="M960 355H1190" stroke="#2e7d32" marker-end="url(#arrow)"/><text class="label" x="1015" y="338" fill="#2e7d32">OUT+ / OUT−</text>
+
+  <rect class="tbc" x="610" y="610" width="350" height="245" rx="18"/>
+  <text class="head" x="650" y="660">Arduino Nano + relay</text>
+  <text class="txt" x="650" y="705">Nano power source: TBC</text>
+  <text class="txt" x="650" y="740">GPIO → relay input: TBC</text>
+  <text class="txt" x="650" y="775">Relay COM/NO/NC load: TBC</text>
+  <text class="small" x="650" y="818">Requires exact board, relay module, pin map,</text>
+  <text class="small" x="650" y="840">firmware, active level, and safe startup state.</text>
+  <path class="dash" d="M405 650H480V760H610" marker-end="url(#arrow)"/><text class="label" x="430" y="740" fill="#b3261e">Possible power/control — TBC</text>
+
+  <rect class="panel" x="75" y="900" width="1450" height="58" rx="12"/>
+  <line x1="115" y1="929" x2="185" y2="929" stroke="#17233b" stroke-width="7"/><text class="small" x="205" y="935">intended low-voltage path, verify</text>
+  <line x1="585" y1="929" x2="655" y2="929" stroke="#b3261e" stroke-width="5" stroke-dasharray="12 10"/><text class="small" x="675" y="935">unconfirmed connection — do not build</text>
+  <text class="small" x="1120" y="935">Copyright © 2026 Erdene Batbayar</text>
+</svg>
