@@ -9,7 +9,7 @@ The current licensing map is:
 | Material | License | Scope |
 |---|---|---|
 | Original hardware/interconnection design, enclosure CAD, and repository documentation | CERN-OHL-S-2.0 | Original source and associated hardware design documentation in this repository |
-| Original firmware, if added later | To be declared when published | Preserve all dependency and third-party notices |
+| Original firmware in `firmware/` | MIT License | Preserve the copyright and permission notice; third-party dependencies retain their own terms |
 | Photographs stored outside this repository | Copyright © 2026 Erdene Batbayar unless separately marked | Public viewing does not by itself grant reuse rights |
 
 CERN OHL v2 offers permissive, weakly reciprocal, and strongly reciprocal variants. The strongly reciprocal variant was selected to keep redistributed improvements to the covered source open. [CERN Open Hardware Licence](https://ohwr.org/licences/).

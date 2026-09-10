@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<rect width="1600" height="1000" fill="white"/>
+<style>.t{font-family:Arial,sans-serif;fill:#192A45}.h{font-weight:700}.s{font-size:24px}.m{font-size:27px}.l{font-size:42px}</style>
+<text class="t h l" x="70" y="82">Benchy — Kira 03 • Arduino Nano + Relay Bench Test</text>
+<text class="t s" x="70" y="125" fill="#667085">Reference low-energy connection • Relay contacts remain disconnected</text>
+<rect x="70" y="150" width="1460" height="95" rx="18" fill="#FFF3CD" stroke="#C78A00" stroke-width="4"/>
+<text class="t h s" x="95" y="197">SCOPE</text><text class="t s" x="205" y="197">Use only with a verified 5 V logic-compatible relay module.</text>
+<text class="t s" x="205" y="230">Power the Nano by USB for this test. Do not connect COM, NO, or NC to any load.</text>
+<rect x="100" y="325" width="470" height="495" rx="24" fill="#F4F7FB" stroke="#192A45" stroke-width="5"/>
+<text class="t h" x="155" y="405" font-size="38">Arduino Nano</text><text class="t h s" x="155" y="455" fill="#2F6EAD">USB</text>
+<text class="t m" x="155" y="495">D2   button input</text><text class="t m" x="155" y="552">D7   relay output</text><text class="t m" x="155" y="609">5V   relay power</text><text class="t m" x="155" y="666">GND  common</text>
+<text class="t s" x="155" y="748" fill="#667085">INPUT_PULLUP on D2</text><text class="t s" x="155" y="784" fill="#667085">Relay commanded OFF at startup</text>
+<rect x="1080" y="310" width="385" height="165" rx="22" fill="white" stroke="#192A45" stroke-width="5"/><text class="t h m" x="1150" y="385">Momentary button</text><text class="t s" x="1150" y="435" fill="#667085">Normally open</text>
+<rect x="980" y="555" width="510" height="315" rx="24" fill="#F4F7FB" stroke="#192A45" stroke-width="5"/><text class="t h" x="1045" y="630" font-size="34">5 V relay module</text><text class="t h m" x="1045" y="682">IN</text><text class="t h m" x="1045" y="732">VCC</text><text class="t h m" x="1045" y="782">GND</text><text class="h m" x="1260" y="682" fill="#C92F2F" font-family="Arial">COM / NO / NC</text><text class="h s" x="1260" y="728" fill="#C92F2F" font-family="Arial">NOT CONNECTED</text><text class="s" x="1260" y="770" fill="#C92F2F" font-family="Arial">during bench test</text>
+<path d="M570 480 H865 V370 H1080" fill="none" stroke="#2F6EAD" stroke-width="8"/><text class="h s" x="650" y="462" fill="#2F6EAD" font-family="Arial">D2</text>
+<path d="M1080 430 H915 V790 H570" fill="none" stroke="#192A45" stroke-width="8"/><text class="h s" x="795" y="772" fill="#192A45" font-family="Arial">GND</text>
+<path d="M570 535 H770 V675 H980" fill="none" stroke="#2D7D46" stroke-width="8"/><text class="h s" x="655" y="522" fill="#2D7D46" font-family="Arial">D7 → IN</text>
+<path d="M570 595 H735 V725 H980" fill="none" stroke="#C92F2F" stroke-width="8"/><text class="h s" x="610" y="582" fill="#C92F2F" font-family="Arial">5V → VCC</text>
+<path d="M570 655 H690 V775 H980" fill="none" stroke="#192A45" stroke-width="8"/><text class="h s" x="590" y="642" fill="#192A45" font-family="Arial">GND</text>
+<text class="s" x="70" y="950" fill="#667085" font-family="Arial">Firmware: firmware/benchy_relay_test/benchy_relay_test.ino</text><text class="s" x="1015" y="950" fill="#667085" font-family="Arial">Copyright © 2026 Erdene Batbayar</text>
+</svg>

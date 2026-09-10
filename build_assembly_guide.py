@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "docs" / "Benchy_Kira_03_Assembly_Guide.docx"
 MODEL_IMAGE = ROOT / "docs" / "images" / "model-preview.png"
 SCHEMATIC_IMAGE = ROOT / "hardware" / "connection-schematic.png"
+NANO_RELAY_IMAGE = ROOT / "hardware" / "nano-relay-test.png"
 
 NAVY = "17365D"
 BLUE = "2F6EAD"
@@ -180,7 +181,7 @@ r.bold = True
 r.font.color.rgb = RGBColor.from_string(NAVY)
 p.add_run(
     "  This guide supports printing, dry-fitting, and mechanical assembly of the documented prototype. "
-    "The exact hardware variants, screw lengths, internal wiring, firmware, and validated print profile have not yet been released. "
+    "The exact hardware variants, screw lengths, final control integration, internal wiring, and validated print profile have not yet been released. "
     "Do not use this document as electrical wiring or commissioning instructions."
 )
 
@@ -220,7 +221,7 @@ items = [
     ("PLA enclosure", "1 set", "Use power supply v.2.3mf; slicing settings remain to be validated."),
     ("Computer power supply", "1", "Use the actual tested unit; model and rail ratings must be recorded."),
     ("SK120 module", "1", "Confirm the exact variant and terminal orientation."),
-    ("Arduino Nano", "1", "Exact board, mounting, pin map, and program remain to be documented."),
+    ("Arduino Nano", "1", "A D2-button/D7-relay test sketch is included; exact board and final integration remain to be confirmed."),
     ("Relay", "1", "Exact relay module, mounting, and electrical function remain to be documented."),
     ("M2 and M3 screws", "As fitted", "Measure and record lengths, head styles, quantities, and mounting locations."),
     ("Panel hardware", "As fitted", "Display, control, inlet/switch, output terminals, and any mating connectors."),
@@ -357,7 +358,7 @@ for text in (
     "Exact SK120, Arduino Nano, and relay variants with manufacturer documentation.",
     "Complete schematic and one wiring-schedule row for every conductor.",
     "Input protection, protective-earth/chassis arrangement, insulation, separation, strain relief, and enclosure suitability.",
-    "Nano firmware, pin assignments, relay state during startup/reset/failure, and output-enable behavior.",
+    "Final Nano behavior, relay state during startup/reset/failure, the switched circuit, and output-enable behavior.",
     "Defined inspection and test procedures with equipment, test points, numerical acceptance limits, and a responsible reviewer.",
 ):
     bullet(doc, text)
@@ -377,6 +378,66 @@ for item in checks:
     p.paragraph_format.space_after = Pt(3)
     p.add_run("☐ ").bold = True
     p.add_run(item)
+
+doc.add_page_break()
+doc.add_heading("Arduino Nano and relay-module bench test", level=1)
+doc.add_paragraph(
+    "Use this reference circuit to test the pushbutton and relay-control logic before any relay contact is connected to the power supply. "
+    "It assumes a verified 5 V logic-compatible relay module. Power the Nano by USB and leave COM, NO, and NC disconnected."
+)
+if NANO_RELAY_IMAGE.exists():
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.add_run().add_picture(str(NANO_RELAY_IMAGE), width=Inches(6.75))
+    p = doc.add_paragraph("Reference test: D2 button input, D7 relay-module input, shared 5 V and GND.")
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    for run in p.runs:
+        run.font.size = Pt(8)
+        run.font.italic = True
+        run.font.color.rgb = RGBColor.from_string(MID_GRAY)
+
+doc.add_heading("Pin map and test sequence", level=2)
+nano = doc.add_table(rows=1, cols=3)
+nano.alignment = WD_TABLE_ALIGNMENT.CENTER
+nano.autofit = False
+for idx, text in enumerate(("Nano", "Connect to", "Function")):
+    cell = nano.rows[0].cells[idx]
+    cell.text = text
+    cell.width = (Inches(0.9), Inches(2.25), Inches(3.45))[idx]
+    shade(cell, NAVY)
+    margins(cell)
+    for run in cell.paragraphs[0].runs:
+        run.font.bold = True
+        run.font.color.rgb = RGBColor(255, 255, 255)
+for row_number, values in enumerate((
+    ("D2", "Momentary button to GND", "Debounced INPUT_PULLUP control; press toggles requested state"),
+    ("D7", "Relay-module IN", "Configurable logic output; sketch defaults to active low"),
+    ("5V", "Relay-module VCC", "Only for a verified 5 V module during the USB bench test"),
+    ("GND", "Relay GND and button return", "Shared low-voltage reference"),
+), start=1):
+    cells = nano.add_row().cells
+    for idx, value in enumerate(values):
+        cells[idx].text = value
+        cells[idx].width = (Inches(0.9), Inches(2.25), Inches(3.45))[idx]
+        margins(cells[idx])
+        if row_number % 2 == 0:
+            shade(cells[idx], PALE_BLUE)
+        for run in cells[idx].paragraphs[0].runs:
+            run.font.size = Pt(8.6)
+borders(nano)
+
+p = doc.add_paragraph()
+p.paragraph_format.space_before = Pt(7)
+p.add_run("Sketch: ").bold = True
+p.add_run("firmware/benchy_relay_test/benchy_relay_test.ino")
+for text in (
+    "Open the sketch in Arduino IDE and select the exact Nano board and processor/bootloader.",
+    "Upload by USB with the relay contacts disconnected; open Serial Monitor at 9600 baud.",
+    "Confirm Relay OFF at startup and one clean ON/OFF change for each button press.",
+    "Verify the relay module's active level. Change RELAY_ACTIVE_LOW only when its documentation requires it.",
+    "Do not connect a bare relay coil directly to D7 and do not use this test circuit to switch mains voltage.",
+):
+    bullet(doc, text)
 
 doc.core_properties.title = "Benchy Kira 03 Prototype Mechanical Assembly Guide"
 doc.core_properties.subject = "Assembly guidance for the Benchy Kira 03 open-source enclosure prototype"
