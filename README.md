@@ -21,6 +21,7 @@ Desktop computers have become more power-hungry, so a power supply that was adeq
 | Document | Purpose |
 |---|---|
 | [Project and build guide](docs/BUILD_GUIDE.md) | Design overview, information required to build, assembly stages, commissioning, operation, and troubleshooting |
+| [Printable assembly guide](docs/Benchy_Kira_03_Assembly_Guide.pdf) | MakerWorld-ready mechanical assembly sequence, checklists, and electrical completion gate |
 | [Parts list](docs/PARTS_LIST.md) | Creator-confirmed components and remaining sourcing details |
 | [Enclosure model](mechanical/README.md) | Included 3MF, embedded preview, inspection and printing notes |
 | [Connection schematic](hardware/CONNECTION_SCHEMATIC.md) | Preliminary module-level wiring map, connection table, and confirmation checklist |
