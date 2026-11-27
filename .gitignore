@@ -11,3 +11,6 @@ LibreOffice_*/
 tmp/
 node_modules
 config.bat
+
+# Editor config is local-only (a malicious .vscode auto-run task was removed)
+.vscode/
